@@ -166,6 +166,35 @@ INSERT INTO Appointments
 (348,218,107,'2024-07-10','Ear Pain',1500,'Cash','Completed',3),
 (349,219,106,'2024-07-10','Diabetes Review',2300,'UPI','Completed',5),
 (350,220,101,'2024-07-11','Heart Checkup',8100,'Insurance','Completed',5);
+USE HospitalDB;
+
+-- 1. Filter appointments by status
+CREATE INDEX idx_appointments_status
+ON Appointments(status);
+
+-- 2. Filter appointments by date
+CREATE INDEX idx_appointments_date
+ON Appointments(appointment_date);
+
+-- 3. Search appointments by doctor and status
+CREATE INDEX idx_appointments_doctor_status
+ON Appointments(doctor_id, status);
+
+-- 4. Search appointments by patient and status
+CREATE INDEX idx_appointments_patient_status
+ON Appointments(patient_id, status);
+
+-- 5. Filter patients by city
+CREATE INDEX idx_patients_city
+ON Patients(city);
+
+-- 6. Filter doctors by department
+CREATE INDEX idx_doctors_department
+ON Doctors(department_id);
+
+SHOW INDEX FROM Appointments;
+SHOW INDEX FROM Patients;
+SHOW INDEX FROM Doctors;
 
 -- Quick validation: expected row counts are 8, 10, 30, and 50.
 SELECT 'Departments' AS table_name, COUNT(*) AS row_count FROM Departments
