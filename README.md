@@ -399,8 +399,8 @@ Use the date slicers, doctor filters and department filters to interact with the
 
 Data Analyst | SQL | Power BI | Python | Data Analytics
 
-- GitHub: [Your GitHub Profile](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
+- GitHub: [Abdul Samad Shaik.(https://github.com/AbdulSamad4238/Hospital-management-analytics)
+- LinkedIn: Abdul Samad Shaik.(www.linkedin.com/in/abdul-samad-shaik-data-scientist)
 
 ---
 
